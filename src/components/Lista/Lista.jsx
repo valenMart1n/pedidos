@@ -24,7 +24,7 @@ function Lista() {
             method: "GET",
             headers: { "Content-Type": "application/json" },
         };
-        fetch("http://localhost:3030/categorias", requestInit)
+        fetch("https://pedidosapi-v1pz.onrender.com/categorias", requestInit)
             .then(res => {
                 if (!res.ok) {
                     throw new Error("La petición no fue exitosa");
@@ -44,7 +44,7 @@ function Lista() {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         };
-        fetch("http://localhost:3030/productos", requestInit)
+        fetch("https://pedidosapi-v1pz.onrender.com/productos", requestInit)
             .then(res => {
                 if (!res.ok) {
                     throw new Error("La petición no fue exitosa");
