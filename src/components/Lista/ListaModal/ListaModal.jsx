@@ -61,7 +61,7 @@ const addProducts = (product) => {
                         prepend(quantity)}}>
                         <Icon icon={faMinus}/>
                     </button>
-                    <input className="form-quantity-input"inputMode="decimal" value={quantity} placeholder></input>
+                    <input className="form-quantity-input" inputMode="decimal" value={quantity} onChange={(e) => setQuantity(e.target.value)} placeholder="Cantidad"></input>
                     <button type="button"className="form-quantity-button" onClick={() => append(quantity)}><Icon icon={faPlus}/></button>
                     
                     </div>

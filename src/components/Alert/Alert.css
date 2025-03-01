@@ -1,0 +1,21 @@
+.alert-background{
+    width: 10em;
+    height: 10px;
+    z-index: 3;
+    background-color: aqua;
+}
+.color-bar{
+    background-color: aqua;
+    width: 10em;
+}
+.color-bar.check{
+    height: 10px;
+    width: 3px;
+    background-color: green;
+}
+.color-bar.cross{
+    background-color: red;
+}
+.color-bar.warning{
+    background-color: yellow;
+}

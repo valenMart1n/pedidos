@@ -12,7 +12,7 @@
 .order-list-background{
     background-color: white;
     width: 90%;
-    height: 80%;
+    height: 60%;
     margin-top: 20px;
     overflow-y: scroll;
 }
@@ -29,11 +29,13 @@
     font-size: 20px;
 }
 .name-input{
-    
     width: 80%;
     height: 30px;
     font-size: 16px;
     padding-left: 10px;
+}
+.name-input.true::placeholder{
+    color: red;
 }
 .order-list{   
     width: 100%;
@@ -52,6 +54,11 @@
     background-color: black;
     height: 1px;
 }
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .confirm-button{
     right: 0px;
     border: none;
@@ -60,20 +67,41 @@
     color: white;
     background-color:rgb(13, 175, 13);
 }
+
 .order-buttons{
+    width: 55%;
     display: flex;
-    justify-content: right;
-    margin-right: 2em;
+    justify-content: space-around;
+    align-items: center;
 }
 .delete-item{
-    
     background-color: red;
+    border-radius: 10px;
     padding: 5px;
-    border-radius: 30px;
     border: none;
-    
     color: white;
     text-align: center;
     font-size: 15px;
+}
+.modify-button{
+    color: white;
+    border: none;
+    background-color: #0275d8;
+    padding: 5px;
+    font-size: 16px;
+    padding: 10px;
+}
+.empty-button{
+    font-size: 18px;
+    border: none;
 
+}
+.name-warning.false{
+    visibility: hidden;
+    width: 45%;    
+}
+.name-warning.true{
+    padding-left: 15px;
+    display: block;
+    color: red;
 }
