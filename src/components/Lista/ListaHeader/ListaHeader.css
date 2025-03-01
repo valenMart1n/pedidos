@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+.lista-header-background{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    
+    width: 100%;
+    height: 30%;
+    
+  
+}
+.logo, .title{
+    width: 100%;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+  /*
+    justify-content: flex-end;*/
+}
+.logo-image{
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../../../images/round-logo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.title{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #e5e6e7;
+    
+}
+.title b{
+    
+    font-style: italic;
+}

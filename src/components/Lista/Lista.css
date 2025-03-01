@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+.lista-background{
+    overflow-x: hidden;
+    width: 100%;
+    
+}
+.categorias{
+    
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: rgb(61, 61, 61);
+    padding: 5px;
+    color: white;
+}
+
+.seccion-2{
+    display: flex;
+    justify-content: center;
+
+}
+.search-bar{
+    margin-top: 20px;
+    width: 45%;
+    height: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dee2e6;
+    padding: 5px;
+}
+.table-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.tabla{
+    
+    background-color: #dee2e6;
+    margin-top: 20px;
+    width: 95%;
+    border:none
+    
+
+}
+.tabla-header{
+    
+    background-color: rgb(49, 49, 49);
+    color: white;
+    height: 75px;
+    text-align: left;
+}
+.table-title{
+    padding-left: 10px;
+    
+}
+
+.table-content{
+    background-color: white;
+    font-size: 14px;
+    border: none;
+    height: 97px;
+    font-weight: 400;
+    text-align: center;
+
+}
+.pedir-button{
+    background-color: #fa9f16;
+    border-color: #fa9f16;
+    width: 85%;
+    padding: 7px 0px 7px 0px;
+    border-radius: 3px;
+    margin: auto;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    
+}
+.icon{
+    background-color: white;
+    border-radius: 5px;
+    color:#fa9f16;
+    padding: 2px;
+    margin: 0px 3px 0px 3px;
+    font-size: 8px;
+}
+.ampliar{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 10px;
+    padding: 2px;
+    background-color: #0275d8;
+    border: white;
+    border-width: 3px;
+    border-radius: 10px;
+    color: white;
+}
+:hover.pedir-button{
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: black;
+}
+.pedir-button:hover .icon{
+    background-color: black;
+    
+}
