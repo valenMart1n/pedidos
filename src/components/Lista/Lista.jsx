@@ -132,7 +132,7 @@ function Lista() {
                                         <AmpliarButton clicked={expandedRows.includes(index)} />
                                         {producto.descripcion}
                                     </td>
-                                    <td className="table-content" style={{ width: "25%" }}>{producto.precio}</td>
+                                    <td className="table-content" style={{ width: "25%"}}>${producto.precio}</td>
                                     <td className="table-content" style={{ width: "25%" }}>
                                         <div className="pedir-button" onClick={() => handleModalOpen(producto)}>
                                             <Icon css="icon" icon={faMinus} />Pedir<Icon css="icon" icon={faPlus} />
@@ -166,7 +166,7 @@ function Lista() {
             {mostrarOrden && (
                 <OrderList changeModal={setMostrarOrden} />
             )}
-       
+      
         </div>
         
     );

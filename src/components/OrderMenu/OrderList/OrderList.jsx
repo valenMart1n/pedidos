@@ -3,14 +3,14 @@ import { Icon } from "../../Icons"; // Importa un componente de íconos personal
 import "./OrderList.css"; // Importa los estilos CSS
 import { faXmark, faTrash } from "@fortawesome/free-solid-svg-icons"; // Íconos de FontAwesome
 import { CartContext } from "../../../contexts/ShoppingCartContext"; // Contexto del carrito
-
+import useAlert from "../../Alert/useAlert";
 function OrderList({ changeModal }) {
     const [cart, setCart] = useContext(CartContext); // Estado para manejar el carrito
     const [total, setTotal] = useState(0); // Estado para manejar el total del pedido
     const [nombre, setNombre] = useState(""); // Estado para manejar el nombre del usuario
     const [show, setShow] = useState(false); // Estado para mostrar advertencias
     const [verifyName, setVerifyName] = useState(false); // Estado para verificar si el nombre está vacío
-
+    const [alerts, createToast] = useAlert();
     // Efecto para actualizar el total cuando cambia el carrito
     useEffect(() => {
         const newTotal = cart.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
@@ -40,6 +40,10 @@ function OrderList({ changeModal }) {
 
     // Función para eliminar un artículo del carrito
     const removeItem = (id) => {
+        createToast({
+            text: "Elemento eliminado",
+            tipo: "cross"
+        });
         setCart((currItems) => {
             if (currItems.find((item) => item.codigo === id)?.cantidad === 1) {
                 return currItems.filter((item) => item.codigo !== id);
@@ -57,6 +61,10 @@ function OrderList({ changeModal }) {
 
     // Vaciar el carrito
     const emptyCart = () => {
+        createToast({
+            text: "Carrito Vaciado",
+            tipo: "check"
+        });
         setCart([]);
     };
 
@@ -101,6 +109,7 @@ function OrderList({ changeModal }) {
                     </div>
                 </div>
             </div>
+            {alerts}
         </div>
     );
 }

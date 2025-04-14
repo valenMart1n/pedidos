@@ -2,25 +2,17 @@ import React from "react"
 import "./Alert.css";
 import { Icon } from "../Icons"
 import { faCheck, faTriangleExclamation, faXmark } from "@fortawesome/free-solid-svg-icons"
-
-export const Alert = (props) =>{
-    <div className="alert-background">
-        {
-          props.tipo === "check" ? (
-            <div>
-            <div className="color-bar check"></div>
-            <Icon icon={faCheck} />
+function Alert({ children, tipo = "check" }) { // Se da un valor por defecto a `tipo`
+    return (
+        <div className="alert-background">
+            <div className="text-background">  
+                <div className={`color-bar ${tipo}`}></div>
+                <div className={`icon-background ${tipo}`}>
+                    <Icon icon={tipo === "check" ? faCheck : faXmark} />
+                </div>
+                <b className="alert-text">{children}</b>
             </div>
-        ) : props.tipo === "cross" ? (
-            <div>
-            <div className="color-bar cross"></div>
-            <Icon icon={faXmark}/>
-            </div>
-        ) : (
-            <div>
-            <div className="color-bar warning"></div>
-            <Icon icon={faTriangleExclamation}/>
-            </div>
-        )}
-    </div>
+        </div>
+    );
 }
+export default Alert;

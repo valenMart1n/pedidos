@@ -9,9 +9,15 @@
     width: 100%;
     
 }
+.seccion-1{
+    display: flex;
+    width: 100%;
+}
+
 .categorias{
     
     width: 40%;
+    max-width: 230px;
     margin-top: 20px;
     margin-left: 10px;
     background-color: rgb(61, 61, 61);
@@ -21,17 +27,22 @@
 
 .seccion-2{
     display: flex;
+    width: 100%;
     justify-content: center;
 
 }
 .search-bar{
     margin-top: 20px;
     width: 45%;
+    max-width: 460px;
     height: 25px;
     border-style: solid;
     border-width: 1px;
     border-color: #dee2e6;
     padding: 5px;
+}
+.options{
+    max-width: 229px;
 }
 .table-container{
     width: 100%;
@@ -43,6 +54,7 @@
     background-color: #dee2e6;
     margin-top: 20px;
     width: 95%;
+    max-width: 1200px;
     border:none
     
 
@@ -107,4 +119,12 @@
 .pedir-button:hover .icon{
     background-color: black;
     
+}
+@media (min-width: 1024px){
+    .pedir-button{
+        max-width: 115px;
+    }
+    .seccion-1{
+        margin-left: 3em;
+    }
 }

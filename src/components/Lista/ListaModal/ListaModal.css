@@ -13,7 +13,7 @@
     background: rgba(0, 0, 0, 0.26);
     display: flex;
     cursor:auto;   
-    z-index: 2;
+   
 }
 .list-modal{
     background-color: #ffffff;
@@ -22,6 +22,7 @@
     border-radius: 5px;
     box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
     margin: auto;
+    z-index: 999;
 }
 .list-modal-header{
     display: flex;
@@ -100,4 +101,9 @@
 }
 :hover.add-button{
     background-color:  rgb(13, 128, 9);
+}
+@media (min-width: 1024px){
+   .list-modal{
+    max-width: 580px;
+   } 
 }

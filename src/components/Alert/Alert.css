@@ -1,21 +1,71 @@
 .alert-background{
-    width: 10em;
-    height: 10px;
-    z-index: 3;
-    background-color: aqua;
+    
+    display: flex;
+    width: 165px;
+    height: 3em;
+    background-color: rgb(253, 255, 255);
+    margin: 5px;
+    border-radius: 10px;
+    transform: translate3d(0, 0, 0);
+}
+.text-background{
+    display: flex;
+    align-items: center;
+    
+}
+.icon-background{
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    width: 20px;
+    
+}
+.icon-background.check{
+    background-color: green;
+}
+.icon-background.cross{
+    background-color: red;
+}
+.icon-background.warning{
+    background-color: rgb(255, 238, 0);
 }
 .color-bar{
-    background-color: aqua;
-    width: 10em;
+    margin-right: 5px;
+   
+    width: 5px;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .color-bar.check{
-    height: 10px;
-    width: 3px;
     background-color: green;
 }
 .color-bar.cross{
     background-color: red;
 }
 .color-bar.warning{
-    background-color: yellow;
+    background-color: rgb(255, 238, 0);
+}
+.alert-text{
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+@media(min-width:1024px){
+    .alert-background{
+        width: 200px;
+    }
+    .alert-text{
+        font-size: 15px;
+    }
+}
+@keyframes fadeIn {
+    from{
+        
+        background-color: blue;
+    }
+    to{
+        transform: translateY(10);
+        background-color: rgb(22, 19, 19);
+    }
 }

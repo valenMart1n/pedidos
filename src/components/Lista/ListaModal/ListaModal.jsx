@@ -3,10 +3,12 @@ import "./ListaModal.css";
 import {Icon} from "../../Icons";
 import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../../contexts/ShoppingCartContext";
-
+import Alert from "../../Alert/Alert";
+import useAlert from "../../Alert/useAlert";
 const ListaModal = ({changeModal, product}) => {
 const [quantity, setQuantity] = useState(1);
 const [cart, setCart] = useContext(CartContext);
+const [alerts, createToast] = useAlert();
 
 const append = (prevQuantity) => {
     setQuantity(prevQuantity + 1);
@@ -17,6 +19,11 @@ const prepend = (prevQuantity) => {
     }
 }
 const addProducts = (product) => {
+    
+    createToast({
+        text: "Producto agregado",
+        tipo: "check"
+    });
     setCart((currItems) => {
       
       const isItemFound = currItems.find((item) => item.codigo === product.codigo);
@@ -71,8 +78,11 @@ const addProducts = (product) => {
                     <button className="add-button" type="button" onClick={() => addProducts(product)}>Agregar</button>
                     </div>
                 </form>
+                
             </div>
+            {alerts}
         </div>
+        
     );
 }
 export default ListaModal;
