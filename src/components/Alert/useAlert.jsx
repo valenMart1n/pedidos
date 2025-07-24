@@ -10,7 +10,7 @@ export default function useAlert(props) {
         console.log('Lista actualizada', list);
         setTimeout(() => {
             setAlerts((prev) => prev.slice(1)); // Solución 2: Usar la versión previa en `setTimeout`
-        }, 3000);
+        }, 1500);
     };
 
     const alerts = (

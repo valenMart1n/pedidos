@@ -92,6 +92,7 @@ function Lista() {
     return (
         <div className="lista-background">
             <ListaHeader />
+            
             <div className="seccion-1">
                 <select className="categorias" onChange={(e) => {
                     const selectedCategoria = categoriasArray[e.target.selectedIndex];

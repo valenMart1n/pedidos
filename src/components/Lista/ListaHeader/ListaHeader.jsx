@@ -12,6 +12,7 @@ function ListaHeader(){
             <div className="title">
                 <b>Curcuma</b>
                 <p>Paraná - Entre Ríos</p>
+                <b>Versión de prueba utilizando datos de muestra</b>
             </div>
         </div>
     );

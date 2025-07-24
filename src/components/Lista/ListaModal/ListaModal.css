@@ -18,7 +18,7 @@
 .list-modal{
     background-color: #ffffff;
     width: 90%;
-    height: 60%;
+    height: 65%;
     border-radius: 5px;
     box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
     margin: auto;
@@ -105,5 +105,6 @@
 @media (min-width: 1024px){
    .list-modal{
     max-width: 580px;
+    max-height: 375px;
    } 
 }

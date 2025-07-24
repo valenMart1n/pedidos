@@ -6,7 +6,7 @@
     background-color: rgb(253, 255, 255);
     margin: 5px;
     border-radius: 10px;
-    transform: translate3d(0, 0, 0);
+    animation: fadeIn 1.6s ease-in-out;
 }
 .text-background{
     display: flex;
@@ -60,12 +60,17 @@
     }
 }
 @keyframes fadeIn {
-    from{
-        
-        background-color: blue;
+    0%{
+        transform: translateX(-20px);
     }
-    to{
-        transform: translateY(10);
-        background-color: rgb(22, 19, 19);
+    20%{
+        transform: translateX(0);
+        
+    }
+    80%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-200px);
     }
 }

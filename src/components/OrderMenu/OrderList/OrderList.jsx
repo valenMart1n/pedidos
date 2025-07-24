@@ -24,7 +24,7 @@ function OrderList({ changeModal }) {
         } else if (nombre === "") { // Verifica si el nombre está vacío
             setVerifyName(true);
         } else {
-            let url = "https://wa.me/" + 3435032467 + "?text=Hola soy " + nombre + 
+            let url = "https://wa.me/" + 12345678 + "?text=Hola soy " + nombre + 
                       ", quisiera hacer un pedido de:%0a" + cart.map((item, index) => (
                           "-" + item.descripcion + " " + item.cantidad + " x " + item.precio + 
                           " = " + item.precio * item.cantidad + "%0a"

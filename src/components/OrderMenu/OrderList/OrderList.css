@@ -28,6 +28,8 @@
 }
 .cierre-order-list{
     font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
 }
 .name-input{
     width: 80%;
@@ -48,6 +50,8 @@
 }
 .order-items{
     margin: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 .bar{
     margin-left: 10px;
@@ -64,10 +68,11 @@
     width: 60%;
     display: flex;
     justify-content: right;
-
+    z-index: 1;
     align-items: center;
 }
 .confirm-button, .modify-button{
+    cursor: pointer;
     border: none;
     color: white;
     padding: 10px;
@@ -82,14 +87,17 @@
 }
 .delete-item{
     background-color: red;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 0px 5px 0px 5px;
     border: none;
     color: white;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
+    height: 2em;
+   
 }
 .empty-button{
+    cursor: pointer;
     font-size: 18px;
     border: none;
 
@@ -103,7 +111,9 @@
     display: block;
     color: red;
 }
-
+.cierre-order-list:hover{
+    background-color: #c07a12;
+}
 @media (min-width: 1024px){
     .order-list-background{
         margin: auto;

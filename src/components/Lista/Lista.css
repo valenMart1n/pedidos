@@ -101,6 +101,7 @@
     font-size: 8px;
 }
 .ampliar{
+    cursor: pointer;
     margin-left: 5px;
     margin-right: 5px;
     font-size: 10px;
@@ -112,6 +113,7 @@
     color: white;
 }
 :hover.pedir-button{
+    cursor: pointer;
     background-color: #ffc107;
     border-color: #ffc107;
     color: black;
@@ -126,5 +128,8 @@
     }
     .seccion-1{
         margin-left: 3em;
+    }
+    .table-content{
+        height: 4.5em;
     }
 }
